@@ -1,34 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Twitter Meta tags
 
-## Getting Started
+<!---<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@nytimesbits" />
+<meta name="twitter:creator" content="@nickbilton" />
+<meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+<meta property="og:title" content="A Twitter for My Sister" />
+<meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
+<meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" /> -->
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Whatsapp Metatags
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!--- 
+<meta property="og:site_name" content="San Roque 2014 Pollos">
+<meta property="og:title" content="San Roque 2014 Pollos" />
+<meta property="og:description" content="Programa de fiestas" />
+<meta property="og:image" itemprop="image" content="http://pollosweb.wesped.es/programa_pollos/play.png">
+<meta property="og:type" content="website" />
+<meta property="og:updated_time" content="1440432930" />
+--->
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Google Metatags
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<!-- 
+<meta name="description" content="A description of the page" />
+<meta name="robots" content="..., ..." />
+<meta name="keywords" content="..., ..." />
+<meta name="revisit-after" content="..." />
+<meta name="generator" content="...." />
+<meta name="googlebot" content="..." />
+<meta name="mssmarttagspreventparsing" content="..." />
+<meta name="no-cache" content="..." />
+<meta name="google" content="notranslate" />
+<meta name="google-site-verification" content="..." />
+<meta name="verify-v1" content="..." />
+<meta http-equiv="Content-Type" content="...; charset=..." />
+<meta http-equiv="refresh" content="...;url=..." 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+-->
 
-To learn more about Next.js, take a look at the following resources:
+## Instagram Metatags
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!--- 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-->
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Facebook Metatags
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<!--- 
+og: locale
+og: type
+og: title
+og: description
+og: url
+og: site_name
+og: image
+og:image:width
+og:image:height
+og:image:alt
+og:image:type
+
+-->
