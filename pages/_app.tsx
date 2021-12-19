@@ -1,9 +1,12 @@
 import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
-import '../styles/componentsStyle/Navbar.scss'
+import { CookiesProvider } from "react-cookie"
+import "../styles/componentsStyle/ChooseMode.scss"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <CookiesProvider>
+      <Component {...pageProps} />
+    </CookiesProvider>
 }
 
 export default MyApp

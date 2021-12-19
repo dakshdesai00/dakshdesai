@@ -63,3 +63,20 @@ og:image:alt
 og:image:type
 
 -->
+
+
+## fonts
+1991-https://fonts.google.com/specimen/DotGothic16?query=dot#standard-styles
+
+--- 
+
+cyberpunk2077-https://fontsrepo.com/cyberpunk-2077-free-font/
+
+---
+
+minimalist-https://fonts.google.com/specimen/Open+Sans
+
+---
+
+Marvel-https://www.fontspace.com/kung-fu-master-font-f61820
+

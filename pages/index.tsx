@@ -1,20 +1,20 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import ChooseMode from '../components/ChooseMode'
 import style from "../styles/Home.module.scss"
-import Navbar from "../components/Navbar"
 
 const Home: NextPage = () => {
-  return (
+  return ( 
     <div>
-      <Head>
+      <Head>  
         <title>Daksh Desai</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> 
       <main className={style.bg}>
-        <Navbar />
+        <ChooseMode />
       </main>
     </div>
   )
-}
+} 
 
 export default Home
