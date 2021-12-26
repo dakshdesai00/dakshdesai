@@ -1,9 +1,65 @@
-.choose_mode_main{
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    .heading{
-        color: white;
-        font-family: "Marvel Outline";
-    }
+.choose_mode_main {
+  background-color: black;
+  overflow: scroll;
+}
+.heading {
+  color: white;
+  font-family: "Andale Mono";
+  height: fit-content;
+  width: fit-content;
+  font-weight: 100;
+}
+.theme_icon_holder {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 50%;
+  overflow: hidden;
+  max-height: 500px;
+  max-width: 500px;
+  overflow: hidden;
+}
+.border-yellow {
+  border: 3px solid yellow;
+}
+
+.border-white {
+  border: 3px solid white;
+}
+
+.theme_icon_holder_with_bg {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 50%;
+  max-height: 500px;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.theme_icon_holder_with_bg_image {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform-origin: center center;
+  height: 30vh;
+  width: 30vh;
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.animate_pos_1 {
+  transform: translate(0);
+}
+
+.animate_pos_2 {
+  transform: translateX(-150px);
+}
+
+.animate_pos_3 {
+  transform: translateY(-150px);
+}
+
+.animate_pos_4 {
+  transform: translateY(-300px);
 }

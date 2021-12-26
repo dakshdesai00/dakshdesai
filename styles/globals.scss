@@ -1,8 +1,11 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif,Cyberpunk Regular;
     margin:0;
     border: 0;
+    width: 100vw;
+    height: 100vh;
+    
 }
 
 @font-face {
@@ -33,7 +36,10 @@
   font-family: "Minimal Regular";
   src: url("../public/fonts/minimal.ttf");
 }
-@font-face {
-  font-family: "Year1991";
-  src: url("../public/fonts/year_1991.ttf");
+
+.theme_icon_avatar{
+  border-radius: 50%; 
+  .theme_icon_avatar_with_bg{
+    z-index: 9;
+  }
 }

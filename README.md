@@ -80,3 +80,10 @@ minimalist-https://fonts.google.com/specimen/Open+Sans
 
 Marvel-https://www.fontspace.com/kung-fu-master-font-f61820
 
+
+## GrayScale Code
+
+-moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray; /* IE6-9 */
+    filter: grayscale(100%);
