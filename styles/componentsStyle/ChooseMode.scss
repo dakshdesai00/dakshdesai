@@ -4,10 +4,19 @@
 }
 .heading {
   color: white;
-  font-family: "Year1991";
-  height: fit-content;
-  width: fit-content;
+  font-family: "Minimal Regular";
+  text-align: center;
+  height: 10vh;
+  font-style: italic;
 }
+.theme_icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: fit-content;
+}
+
 .theme_icon_holder {
   height: 30vh;
   width: 30vh;
@@ -16,6 +25,8 @@
   max-height: 500px;
   max-width: 500px;
   overflow: hidden;
+  min-width: 50px;
+  min-height: 50px;
 }
 .border-yellow {
   border: 3px solid yellow;
@@ -33,6 +44,8 @@
   max-width: 500px;
   overflow: hidden;
   position: relative;
+  min-width: 50px;
+  min-height: 50px;
 }
 
 .theme_icon_holder_with_bg_image {
@@ -61,4 +74,13 @@
 
 .animate_pos_4 {
   transform: translateY(-300px);
+}
+
+.mode_sub_text{
+  color: white;
+  z-index: 9;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
 }

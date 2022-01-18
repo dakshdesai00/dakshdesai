@@ -28,21 +28,24 @@
   font-family: "Marvel Regular Italian";
   src: url("../public/fonts/marvel_regular_italian.ttf");
 }
-@font-face {
-  font-family: "Minimal Italian";
-  src: url("../public/fonts/minimal-italian.ttf");
-}
+
 @font-face {
   font-family: "Minimal Regular";
   src: url("../public/fonts/minimal.ttf");
 }
 @font-face {
-  font-family: "Year1991";
-  src: url("../public/fonts/year1991.ttf");
+  font-family: "Year1900";
+  src: url("../public/fonts/year1900.ttf");
 }
 
 .theme_icon_avatar{
   border-radius: 50%; 
+  min-width: 50px;
+  min-height: 50px;
+  height: 25vh;
+  width: 25vh;
+  max-height: 25vh;
+  max-width: 25vh;
   .theme_icon_avatar_with_bg{
     z-index: 9;
   }
