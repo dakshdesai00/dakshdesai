@@ -16,7 +16,6 @@ function ChooseMode() {
   var year_1900_animate_interval: NodeJS.Timer;
   var [selectedTheme, setSelectedTheme] = useState("minimal");
   var [isMarvelThemeHovered, setIsMarvelThemeHovered] = useState(false);
-  var [isCyberpunkThemeHovered, setIsCyberpunkThemeHovered] = useState(false);
 
   if (typeof window === "object") {
     var theme_1900 = document.getElementById(
@@ -274,7 +273,6 @@ function ChooseMode() {
           className="theme_icon_holder_with_bg"
           id="year1900_theme_selector"
           onMouseEnter={() => {
-            setIsCyberpunkThemeHovered(false);
             const bgImage = document.getElementById(
               "year1900_theme_selector_bg"
             );
@@ -295,7 +293,6 @@ function ChooseMode() {
             }
           }}
           onMouseOut={() => {
-            setIsCyberpunkThemeHovered(false);
             const choose_theme_heading = document.getElementById(
               "choose_theme_heading"
             );
@@ -321,7 +318,6 @@ function ChooseMode() {
                 "theme_icon_holder_with_bg_image animate_pos_1";
           }}
           onClick={() => {
-            setIsCyberpunkThemeHovered(false);
             clearInterval(year_1900_animate_interval);
             setSelectedTheme("year1900");
           }}
@@ -349,7 +345,6 @@ function ChooseMode() {
           className="theme_icon_holder"
           id="minimilistic_theme_selector"
           onClick={() => {
-            setIsCyberpunkThemeHovered(false);
             if (year_1900_animate_interval)
               clearInterval(year_1900_animate_interval);
 
@@ -361,7 +356,6 @@ function ChooseMode() {
               choose_theme_heading.style.fontFamily = "Minimal Regular";
           }}
           onMouseOver={() => {
-            setIsCyberpunkThemeHovered(false);
             if (year_1900_animate_interval)
               clearInterval(year_1900_animate_interval);
 
@@ -372,7 +366,6 @@ function ChooseMode() {
               choose_theme_heading.style.fontFamily = "Minimal Regular";
           }}
           onMouseOut={() => {
-            setIsCyberpunkThemeHovered(false);
             const choose_theme_heading = document.getElementById(
               "choose_theme_heading"
             );
@@ -403,7 +396,6 @@ function ChooseMode() {
           id="marvel_theme_selector"
           onMouseOver={() => {
             setIsMarvelThemeHovered(true);
-            setIsCyberpunkThemeHovered(false);
             if (year_1900_animate_interval)
               clearInterval(year_1900_animate_interval);
             const choose_theme_heading = document.getElementById(
@@ -414,7 +406,7 @@ function ChooseMode() {
           }}
           onMouseOut={() => {
             setIsMarvelThemeHovered(false);
-            setIsCyberpunkThemeHovered(false);
+
             const choose_theme_heading = document.getElementById(
               "choose_theme_heading"
             );
@@ -434,7 +426,7 @@ function ChooseMode() {
           onClick={() => {
             setIsMarvelThemeHovered(false);
             setSelectedTheme("marvel");
-            setIsCyberpunkThemeHovered(false);
+
             if (year_1900_animate_interval)
               clearInterval(year_1900_animate_interval);
             const choose_theme_heading = document.getElementById(
@@ -459,7 +451,11 @@ function ChooseMode() {
           className="theme_icon_holder border-yellow"
           id="cyberpunk_theme_selector"
           onMouseOver={() => {
-            setIsCyberpunkThemeHovered(true);
+            var cyberpunk_theme_selector_image = document.getElementById(
+              "cyberpunk_theme_selector_image"
+            );
+            if (cyberpunk_theme_selector_image)
+              cyberpunk_theme_selector_image.style.display = "none";
             if (year_1900_animate_interval)
               clearInterval(year_1900_animate_interval);
             const choose_theme_heading = document.getElementById(
@@ -469,10 +465,14 @@ function ChooseMode() {
               choose_theme_heading.style.fontFamily = "Cyberpunk Regular";
           }}
           onMouseOut={() => {
-            setIsCyberpunkThemeHovered(false);
             const choose_theme_heading = document.getElementById(
               "choose_theme_heading"
             );
+            var cyberpunk_theme_selector_image = document.getElementById(
+              "cyberpunk_theme_selector_image"
+            );
+            if (cyberpunk_theme_selector_image)
+              cyberpunk_theme_selector_image.style.display = "block";
             if (selectedTheme !== "cyberpunk") {
               if (selectedTheme === "marvel") {
                 if (choose_theme_heading)
@@ -487,7 +487,11 @@ function ChooseMode() {
             }
           }}
           onClick={() => {
-            setIsCyberpunkThemeHovered(false);
+            var cyberpunk_theme_selector_image = document.getElementById(
+              "cyberpunk_theme_selector_image"
+            );
+            if (cyberpunk_theme_selector_image)
+              cyberpunk_theme_selector_image.style.display = "block";
             if (year_1900_animate_interval)
               clearInterval(year_1900_animate_interval);
             setSelectedTheme("cyberpunk");
@@ -498,15 +502,14 @@ function ChooseMode() {
               choose_theme_heading.style.fontFamily = "Cyberpunk Regular";
           }}
         >
-          {!isCyberpunkThemeHovered ? (
-            <Image
-              src={CyberpunkThemeIcon}
-              quality={100}
-              className="theme_icon_avatar"
-              objectFit="contain"
-              priority={true}
-            />
-          ) : null}
+          <Image
+            src={CyberpunkThemeIcon}
+            quality={100}
+            className="theme_icon_avatar"
+            objectFit="contain"
+            priority={true}
+            id="cyberpunk_theme_selector_image"
+          />
         </div>
       </div>
 
