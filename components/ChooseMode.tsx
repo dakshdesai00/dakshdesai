@@ -9,6 +9,7 @@ import MarvelThemeIconWithoutBg from "../public/images/chooseThemeIcons/png/Marv
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { motion } from "framer-motion";
 
 function ChooseMode() {
@@ -546,7 +547,7 @@ function ChooseMode() {
         >
           Continue
           <FontAwesomeIcon
-            icon={faArrowRight}
+            icon={faArrowRight as IconProp}
             style={{ color: "black", height: "2.5vh", width: "2vw" }}
             id="right-arrow"
           />
