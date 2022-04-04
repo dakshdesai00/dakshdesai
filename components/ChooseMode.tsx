@@ -1,7 +1,6 @@
 import { useCookies } from "react-cookie";
 import Image from "next/image";
 import CyberpunkThemeIcon from "../public/images/chooseThemeIcons/png/CyberpunkThemeIcon.png";
-import MarvelThemeIcon from "../public/images/chooseThemeIcons/png/MarvelThemeIcon.png";
 import MinimilisticThemeIcon from "../public/images/chooseThemeIcons/png/MinimalisticThemeIcon.png";
 import Year1900ThemeIcon from "../public/images/chooseThemeIcons/png/Year1900ThemeIcon.png";
 import Year1900ThemeIconBg from "../public/images/chooseThemeIcons/png/year_1900_theme_icon_bg.jpeg";
@@ -396,7 +395,20 @@ function ChooseMode() {
           className="theme_icon_holder border-white"
           id="marvel_theme_selector"
           onMouseOver={() => {
-            setIsMarvelThemeHovered(true);
+            const marvel_icon_logo = document.getElementById(
+              "marvel_theme_selector"
+            );
+            if (marvel_icon_logo) {
+              const BGImageGif =
+                window.location.origin +
+                "/images/chooseThemeIcons/gif/marvel-hover-bg.gif";
+
+              marvel_icon_logo.style.backgroundImage =
+                "url(" + BGImageGif + ")";
+              marvel_icon_logo.style.backgroundRepeat = "no-repeat";
+              marvel_icon_logo.style.backgroundSize = "72vh 30vh";
+            }
+
             if (year_1900_animate_interval)
               clearInterval(year_1900_animate_interval);
             const choose_theme_heading = document.getElementById(
@@ -407,7 +419,12 @@ function ChooseMode() {
           }}
           onMouseOut={() => {
             setIsMarvelThemeHovered(false);
-
+            const marvel_icon_logo = document.getElementById(
+              "marvel_theme_selector"
+            );
+            if (marvel_icon_logo) {
+              marvel_icon_logo.style.background = "red";
+            }
             const choose_theme_heading = document.getElementById(
               "choose_theme_heading"
             );
@@ -438,9 +455,7 @@ function ChooseMode() {
           }}
         >
           <Image
-            src={
-              isMarvelThemeHovered ? MarvelThemeIconWithoutBg : MarvelThemeIcon
-            }
+            src={MarvelThemeIconWithoutBg}
             quality={100}
             className="theme_icon_avatar"
             objectFit="contain"
